@@ -48,3 +48,7 @@ Whenever writing documentation in Markdown, always remember to:
 ### Project Management Approach
 
 - Always update the corresponding Markdown plan document with the latest state of the completed steps
+
+### Testing Approach
+
+- Always use case insensitive regex to assert text in testing, avoid hardcoded strings because they are case sensitive
