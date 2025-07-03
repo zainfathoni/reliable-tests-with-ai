@@ -1,0 +1,7 @@
+button {
+  display: block;
+  margin: 16px auto;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+{
+  "markdownlint.config": {
+    "blanks-around-headings": false,
+    "blanks-around-lists": false,
+    "blanks-around-fences": false,
+    "descriptive-link-text": false,
+    "fenced-code-language": false,
+    "no-bare-urls": false,
+    "no-duplicate-heading": false,
+    "no-inline-html": false,
+    "commands-show-output": false
+  }
+}

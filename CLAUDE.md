@@ -22,8 +22,7 @@ Here are the talking points:
 
 - [x] Initialize the talk slides using
       [Code Surfer](https://codesurfer.pomb.us/)
-- [ ] Prepare the demo app with a simple component rendered in the browser
-  - Use this repository as an example: <https://github.com/pomber/react-conf-2018-hooks-demo>
+- [x] Prepare the demo app with a simple component rendered in the browser
 - [ ] Write the slides based on the talking points
   - [ ] 1. Prepare React Testing Infrastructure
   - [ ] 2. Write reliable tests for React components
@@ -33,3 +32,16 @@ Here are the talking points:
       [Vitest Browser Mode](https://vitest.dev/guide/browser/)
 - [ ] Prepare the AI prompts to write the tests reliably under `docs/test-plans`
       directory
+
+## Claude Code Automation Approaches
+
+### Documentation Approach
+
+Whenever writing documentation in Markdown, always remember to:
+
+- Add a new line after the first header
+- Add a new line by the end of the file
+
+### TypeScript Approach
+
+- Use TypeScript, so it should use .tsx instead of .js whenever applicable
