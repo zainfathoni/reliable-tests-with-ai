@@ -1,11 +1,11 @@
-import { github, vsDark } from "@code-surfer/themes";
-import {
-  CodeSurfer,
-  CodeSurferColumns,
-  Step,
-} from "code-surfer";
-
-export const theme = vsDark;
+---
+theme: gaia
+_class: lead
+paginate: true
+backgroundColor: #fff
+backgroundImage: url('https://marp.app/assets/hero-background.svg')
+marp: true
+---
 
 # Writing Reliable Tests for React using AI
 
@@ -58,6 +58,6 @@ A comprehensive guide to building robust test suites with AI assistance
 
 ---
 
-## Thank You!
+## Thank You
 
 Questions & Discussion

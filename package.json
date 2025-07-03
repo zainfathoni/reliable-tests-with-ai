@@ -2,10 +2,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
     "dev": "vite",
-    "build-app": "vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"there are no tests\""
   },
@@ -17,10 +15,8 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.0.0",
-    "code-surfer": "3.1.0",
-    "mdx-deck": "3.0.13",
     "typescript": "^5.0.0",
     "vite": "^4.4.0"
   },
-  "name": "deck"
+  "name": "reliable-tests-with-ai"
 }
