@@ -13,6 +13,7 @@ Set up a comprehensive testing infrastructure that demonstrates:
 3. Test data generation using faker
 4. Coverage reporting and CI-ready test scripts
 5. Foundation for AI-generated test demonstrations
+6. Playwright MCP integration for AI-assisted testing workflows
 
 ## Implementation Steps
 
@@ -23,6 +24,7 @@ Set up a comprehensive testing infrastructure that demonstrates:
 - **React testing utilities**: `@testing-library/react`, `@testing-library/jest-dom`, `@testing-library/user-event`
 - **Test data generation**: `@faker-js/faker`
 - **Coverage reporting**: `@vitest/coverage-v8`
+- **Playwright MCP**: `@playwright/mcp` for AI-assisted testing
 
 ### Step 2: Configure Vitest Browser Mode
 
@@ -82,12 +84,20 @@ Replace the placeholder test script with:
 - `test:coverage`: Generate coverage reports
 - `test:verbose`: Detailed test output
 
-### Step 7: Create Documentation
+### Step 7: Configure Playwright MCP Integration
+
+- Set up Playwright MCP server configuration
+- Configure MCP server connection in Claude Code
+- Create example workflows for AI-assisted test generation
+- Document MCP usage patterns for testing
+
+### Step 8: Create Documentation
 
 - Document testing strategy and patterns
 - Create examples of reliable test writing
 - Document AI prompting approaches for test generation
 - Add testing guidelines for future components
+- Document Playwright MCP integration and usage
 
 ## Expected Directory Structure After Implementation
 
@@ -109,7 +119,8 @@ reliable-tests-with-ai/
 │       └── ToggleHooks.tsx
 ├── vitest-setup.ts
 ├── vite.config.js (updated)
-└── package.json (updated)
+├── package.json (updated)
+└── claude_code_config.json (MCP configuration)
 ```
 
 ## Testing Strategy
@@ -143,6 +154,10 @@ reliable-tests-with-ai/
 - **CI-ready**: Automated testing in continuous integration
 - **Faker integration**: Realistic test data generation
 - **Jest-DOM matchers**: Enhanced assertions for DOM testing
+- **Playwright MCP integration**: AI-assisted testing workflows
+  - Accessibility-tree based web interactions
+  - Structured data for AI analysis without vision models
+  - Deterministic web automation capabilities
 
 ## Testing Best Practices
 
@@ -162,6 +177,39 @@ reliable-tests-with-ai/
 - [ ] Documentation completed with examples
 - [ ] Foundation ready for AI-generated test demonstrations
 
+## Playwright MCP Integration
+
+### MCP Server Configuration
+
+Configure the MCP server in Claude Code settings:
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}
+```
+
+### AI-Assisted Testing Workflows
+
+1. **Test Generation**: Use Claude Code to generate test scenarios based on component structure
+2. **Test Execution**: Claude Code can interact with the browser to validate test cases
+3. **Test Debugging**: Claude Code can analyze test failures and suggest fixes
+4. **Accessibility Testing**: Leverage MCP's accessibility tree for comprehensive testing
+5. **Interactive Testing**: Claude Code can perform real-time browser interactions during development
+
+### MCP Usage Patterns
+
+- **Snapshot Mode**: Fast accessibility-tree based interactions (default)
+- **Vision Mode**: Screenshot-based interactions when needed
+- **Structured Data**: Claude Code analyzes DOM structure without vision models
+- **Deterministic Actions**: Consistent browser automation for reliable tests
+- **Live Interaction**: Claude Code can interact with running applications in real-time
+
 ## Next Steps
 
 After implementation, this testing infrastructure will serve as the foundation for:
@@ -170,3 +218,6 @@ After implementation, this testing infrastructure will serve as the foundation f
 2. Creating test prompt templates
 3. Showing reliable test patterns
 4. Building comprehensive test suites for React applications
+5. Showcasing Playwright MCP integration with Claude Code for AI-assisted testing workflows
+6. Creating examples of accessibility-driven test automation
+7. Demonstrating live browser interaction capabilities during development
