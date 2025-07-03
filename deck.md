@@ -13,6 +13,37 @@ A comprehensive guide to building robust test suites with AI assistance
 
 ---
 
+## Introduction
+
+![bg left](assets/jsconf-asia-2019.jpg)
+
+https://www.zainfathoni.com/about
+
+---
+
+## AI Usage Principles
+
+![bg right](assets/iron-man.png)
+
+- Use AI to **enhance** your productivity
+- Be the **pilot**, not the passenger
+- Iron Man **suit**, not ~~robot~~ :robot:
+- https://x.com/zainfathoni/status/1938256445663023244
+
+---
+
+## Context 🤯
+
+![bg fit](assets/context-overflow.png)
+
+---
+
+## Context 🛠️
+
+![bg fit](assets/context-engineering.png)
+
+---
+
 ## Agenda
 
 1. **Prepare React Testing Infrastructure**
