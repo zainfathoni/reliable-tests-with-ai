@@ -7,8 +7,9 @@ describe('ToggleHooks', () => {
   it('renders with initial state off', () => {
     render(<ToggleHooks />)
     
-    const button = screen.getByRole('button')
-    expect(button).toHaveTextContent(/off/i)
+    const stateDisplay = screen.getByText(/off/i)
+    expect(stateDisplay).toBeInTheDocument()
+    const button = screen.getByRole('button', { name: /toggle/i })
     expect(button).toBeInTheDocument()
   })
 
@@ -16,37 +17,37 @@ describe('ToggleHooks', () => {
     const user = userEvent.setup()
     render(<ToggleHooks />)
     
-    const button = screen.getByRole('button')
-    expect(button).toHaveTextContent(/off/i)
+    const button = screen.getByRole('button', { name: /toggle/i })
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
     
     await user.click(button)
-    expect(button).toHaveTextContent(/on/i)
+    expect(screen.getByText(/on/i)).toBeInTheDocument()
     
     await user.click(button)
-    expect(button).toHaveTextContent(/off/i)
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
   })
 
   it('maintains state through multiple toggles', async () => {
     const user = userEvent.setup()
     render(<ToggleHooks />)
     
-    const button = screen.getByRole('button')
+    const button = screen.getByRole('button', { name: /toggle/i })
     
     // Toggle multiple times
     await user.click(button)
-    expect(button).toHaveTextContent(/on/i)
+    expect(screen.getByText(/on/i)).toBeInTheDocument()
     
     await user.click(button)
-    expect(button).toHaveTextContent(/off/i)
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
     
     await user.click(button)
-    expect(button).toHaveTextContent(/on/i)
+    expect(screen.getByText(/on/i)).toBeInTheDocument()
   })
 
   it('uses Button component for rendering', () => {
     render(<ToggleHooks />)
     
-    const button = screen.getByRole('button')
+    const button = screen.getByRole('button', { name: /toggle/i })
     expect(button).toHaveClass('button')
   })
 
@@ -54,17 +55,17 @@ describe('ToggleHooks', () => {
     const user = userEvent.setup()
     render(<ToggleHooks />)
     
-    const button = screen.getByRole('button')
+    const button = screen.getByRole('button', { name: /toggle/i })
     
     // Should start in off state
-    expect(button).toHaveTextContent(/off/i)
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
     
     // Should toggle to on
     await user.click(button)
-    expect(button).toHaveTextContent(/on/i)
+    expect(screen.getByText(/on/i)).toBeInTheDocument()
     
     // Should toggle back to off
     await user.click(button)
-    expect(button).toHaveTextContent(/off/i)
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
   })
 })

@@ -7,8 +7,9 @@ describe('Toggle', () => {
   it('renders with initial state off', () => {
     render(<Toggle />)
     
-    const button = screen.getByRole('button')
-    expect(button).toHaveTextContent(/off/i)
+    const stateDisplay = screen.getByText(/off/i)
+    expect(stateDisplay).toBeInTheDocument()
+    const button = screen.getByRole('button', { name: /toggle/i })
     expect(button).toBeInTheDocument()
   })
 
@@ -16,37 +17,37 @@ describe('Toggle', () => {
     const user = userEvent.setup()
     render(<Toggle />)
     
-    const button = screen.getByRole('button')
-    expect(button).toHaveTextContent(/off/i)
+    const button = screen.getByRole('button', { name: /toggle/i })
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
     
     await user.click(button)
-    expect(button).toHaveTextContent(/on/i)
+    expect(screen.getByText(/on/i)).toBeInTheDocument()
     
     await user.click(button)
-    expect(button).toHaveTextContent(/off/i)
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
   })
 
   it('maintains state through multiple toggles', async () => {
     const user = userEvent.setup()
     render(<Toggle />)
     
-    const button = screen.getByRole('button')
+    const button = screen.getByRole('button', { name: /toggle/i })
     
     // Toggle multiple times
     await user.click(button)
-    expect(button).toHaveTextContent(/on/i)
+    expect(screen.getByText(/on/i)).toBeInTheDocument()
     
     await user.click(button)
-    expect(button).toHaveTextContent(/off/i)
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
     
     await user.click(button)
-    expect(button).toHaveTextContent(/on/i)
+    expect(screen.getByText(/on/i)).toBeInTheDocument()
   })
 
   it('uses Button component for rendering', () => {
     render(<Toggle />)
     
-    const button = screen.getByRole('button')
+    const button = screen.getByRole('button', { name: /toggle/i })
     expect(button).toHaveClass('button')
   })
 })
