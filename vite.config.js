@@ -19,11 +19,13 @@ export default defineConfig({
     browser: {
       enabled: true,
       provider: 'playwright',
-      name: 'chromium',
-      headless: true
+      instances: [
+        {
+          browser: 'chromium',
+          headless: true
+        }
+      ]
     },
-    // Test environment configuration
-    environment: 'happy-dom',
     globals: true,
     setupFiles: ['./vitest-setup.ts'],
     // Coverage configuration

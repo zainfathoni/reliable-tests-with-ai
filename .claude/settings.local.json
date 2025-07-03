@@ -4,7 +4,9 @@
       "Bash(mkdir:*)",
       "Bash(pnpm install:*)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(pnpm add:*)"
+      "Bash(pnpm add:*)",
+      "Bash(find:*)",
+      "Bash(npm test)"
     ],
     "deny": []
   }
