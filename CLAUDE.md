@@ -44,3 +44,7 @@ Whenever writing documentation in Markdown, always remember to:
 ### TypeScript Approach
 
 - Use TypeScript, so it should use .tsx instead of .js whenever applicable
+
+### Project Management Approach
+
+- Always update the corresponding Markdown plan document with the latest state of the completed steps
