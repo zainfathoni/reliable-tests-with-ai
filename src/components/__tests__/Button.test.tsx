@@ -9,7 +9,6 @@ describe('Button', () => {
     
     const button = screen.getByRole('button', { name: /click me/i })
     expect(button).toBeInTheDocument()
-    expect(button).toHaveClass('button')
   })
 
   it('renders with custom text', () => {
@@ -35,7 +34,7 @@ describe('Button', () => {
     render(<Button className="custom-class">Styled Button</Button>)
     
     const button = screen.getByRole('button', { name: /styled button/i })
-    expect(button).toHaveClass('button', 'custom-class')
+    expect(button).toHaveClass('custom-class')
   })
 
   it('passes through other props', () => {

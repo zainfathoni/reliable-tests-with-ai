@@ -48,7 +48,7 @@ describe('ToggleHooks', () => {
     render(<ToggleHooks />)
     
     const button = screen.getByRole('button', { name: /toggle/i })
-    expect(button).toHaveClass('button')
+    expect(button).toBeInTheDocument()
   })
 
   it('behaves identically to class-based Toggle component', async () => {

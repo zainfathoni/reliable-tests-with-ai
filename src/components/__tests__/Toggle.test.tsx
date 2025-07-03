@@ -48,6 +48,6 @@ describe('Toggle', () => {
     render(<Toggle />)
     
     const button = screen.getByRole('button', { name: /toggle/i })
-    expect(button).toHaveClass('button')
+    expect(button).toBeInTheDocument()
   })
 })

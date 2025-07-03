@@ -7,10 +7,9 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 class Button extends React.Component<ButtonProps> {
   render() {
-    const { children, className, ...props } = this.props
-    const buttonClass = className ? `button ${className}` : 'button'
+    const { children, ...props } = this.props
     return (
-      <button className={buttonClass} {...props}>
+      <button {...props}>
         {children}
       </button>
     )
