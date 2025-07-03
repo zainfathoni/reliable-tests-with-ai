@@ -22,7 +22,6 @@ Set up a comprehensive testing infrastructure that demonstrates:
 - **Core Vitest packages**: `vitest`, `@vitest/browser`
 - **Browser automation**: `playwright`, `@playwright/test`
 - **React testing utilities**: `@testing-library/react`, `@testing-library/jest-dom`, `@testing-library/user-event`
-- **Test data generation**: `@faker-js/faker`
 - **Coverage reporting**: `@vitest/coverage-v8`
 - **Playwright MCP**: `@playwright/mcp` for AI-assisted testing
 
@@ -135,9 +134,9 @@ reliable-tests-with-ai/
 
 ### Test Data Generation
 
-- Use `@faker-js/faker` for generating realistic test data
+- Use simple hardcoded test values for basic testing
 - Create consistent test data patterns
-- Avoid hardcoded test values for better test reliability
+- Keep test data simple and focused on component behavior
 
 ### Coverage Requirements
 
@@ -152,7 +151,6 @@ reliable-tests-with-ai/
 - **Coverage reporting**: Comprehensive test coverage analysis
 - **Watch mode**: Fast feedback during development
 - **CI-ready**: Automated testing in continuous integration
-- **Faker integration**: Realistic test data generation
 - **Jest-DOM matchers**: Enhanced assertions for DOM testing
 - **Playwright MCP integration**: AI-assisted testing workflows
   - Accessibility-tree based web interactions
@@ -169,7 +167,7 @@ reliable-tests-with-ai/
 
 ## Success Criteria
 
-- [ ] All testing dependencies installed successfully
+- [x] All testing dependencies installed successfully
 - [ ] Vitest Browser Mode configured and running
 - [ ] All components have comprehensive tests
 - [ ] Tests pass in both watch and CI modes
