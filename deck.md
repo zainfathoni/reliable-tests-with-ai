@@ -99,4 +99,4 @@ https://www.zainfathoni.com/about
 
 ## Thank You
 
-Questions & Discussion
+https://zainf.dev/reliable-tests-with-ai
